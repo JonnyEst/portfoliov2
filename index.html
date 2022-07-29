@@ -421,7 +421,7 @@
                             <div class="qualification__data">
                                 <div>
                                     <h3 class="qualification__title">Administrative</h3>
-                                    <span class="qualification__subtitle">C h i p s</span>
+                                    <span class="qualification__subtitle">C h i p s </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
                                         2018-2018
@@ -446,7 +446,7 @@
 
                                 <div>
                                     <h3 class="qualification__title">operator</h3>
-                                    <span class="qualification__subtitle">C i p r e s</span>
+                                    <span class="qualification__subtitle">C i p r e s </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
                                         2018-2019
@@ -712,53 +712,47 @@
                         </div>
                     </div>
 
-                    <from id="form-1" class="contact__form grid" >
+                    <form action="https://formspree.io/f/xwkzepyb"
+                    method="POST" class="contact__form grid">
+
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input" name="name" id="name" required>
+                                <label class="contact__label">
+                                Name:
+                                <input type="text" class="contact__input" name="name" required>
+                                </label>
                             </div>
                         </div>
+
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input" name="email" id="email" required>
+                                <label class="contact__label">
+                                Email:
+                                <input type="email" name="email" class="contact__input" required>
+                                </label>
                             </div>
                         </div>
+                        
                         <div class="contact__content">
-                            <label for="" class="contact__label">Project</label>
+                            <label for="" class="contact__label">
+                            Project:
                             <input type="text" class="contact__input" name="subject" id="subject">
+                            </label>
                         </div>
+
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required></textarea>
-                            
-                          
+                            <label class="contact__label">
+                            Message:
+                            <textarea name="message" cols="0" rows="7"  class="contact__input" ></textarea>
+                            </label>
                         </div>
 
-                        <!-- <input type="submit" id="button" value="Send Email" > -->
-                        <div>
-                            <a href="" class="button button--flex">
-                                Send Message
-                                <i type="submit" id="button" class="uil uil-message button__icon"></i>
-                            </a>
+                        <!-- your other form fields go here -->
+                        <div class="buttonv2 button--flex">
+                            <button type="submit" id="button-contact" class="uil uil-message button__icon">Send Message</button>
                         </div>
-                    </from>
-
-                    <script>
-                        const $form = document.querySelector('#form-1')
-
-                        $form.addEventListener('submit', handleSubmit)
-
-                        function handleSubmit(event){
-                            event.preventDefault()
-                            const form = new fromData(this)
-                            console.log(form.get('name'))
-                        }
-
-                    </script>
-
-
+                    </form>   
+                   
                 </div>
             </section>
         </main>
@@ -813,6 +807,8 @@
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
 
+        <!--====================Send Email========================-->
+        <script src="assets/js/sendEmail.js"></script>
       
 
     </body>
